@@ -24,3 +24,5 @@ Route::get('/', function () {
 Route::get('hello/{id?}','HelloController@index');
 
 Route::post('hello','HelloController@post');
+
+Route::get('/quiz/{id}', 'QuestionController@index')->name('quiz.id');
