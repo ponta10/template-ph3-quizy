@@ -12,7 +12,7 @@ class ChoiceTableSeeder extends Seeder
     public function run()
     {
         //
-        $params = [
+        $selections = [
             [
                 'question_id' => 1,
                 'name' => 'たかなわ',
@@ -61,8 +61,8 @@ class ChoiceTableSeeder extends Seeder
         ];
 
 
-        foreach ($params as $param) {
-            DB::table('choices')->insert($param);
+        foreach ($selections as $selection) {
+            DB::table('choices')->insert($selection);
         }
     }
 }
