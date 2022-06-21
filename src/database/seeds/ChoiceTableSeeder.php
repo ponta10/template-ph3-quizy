@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class ChoiceTableSeeder extends Seeder
 {
@@ -60,6 +59,7 @@ class ChoiceTableSeeder extends Seeder
                 'valid' => 1,
             ],
         ];
+
 
         foreach ($params as $param) {
             DB::table('choices')->insert($param);

@@ -14,7 +14,7 @@
                 <h1>{{ $loop -> index + 1 }}. この地名はなんて読む？</h1>
                 <img src="/img/{{ $question->image }}">
                 <ul>
-                    @foreach ($choices->where('question_id', $question->id) as $choice)
+                    @foreach ($choices as $choice)
                         <li 
                         >{{ $choice->name }}</li>
                     @endforeach
