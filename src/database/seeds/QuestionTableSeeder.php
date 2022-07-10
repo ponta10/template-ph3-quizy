@@ -15,18 +15,22 @@ class QuestionTableSeeder extends Seeder
         $params = [
             [
                 'big_question_id' => 1,
+                'status' => 1,
                 'image' => 'takanawa.png'
             ],
             [
                 'big_question_id' => 1,
+                'status' => 1,
                 'image' => 'kameido.png',
             ],
             [
                 'big_question_id' => 2,
+                'status' => 1,
                 'image' => 'mukainada.png'
             ],            
             [
                 'big_question_id' => 2,
+                'status' => 1,
                 'image' => 'mitsugi.png'
             ],
         ];

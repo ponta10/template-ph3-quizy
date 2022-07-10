@@ -58,6 +58,21 @@ class ChoiceTableSeeder extends Seeder
                 'name' => 'むかいなだ',
                 'valid' => 1,
             ],
+            [
+                'question_id' => 4,
+                'name' => 'おしらべ',
+                'valid' => 0,
+            ],
+            [
+                'question_id' => 4,
+                'name' => 'みつぎ',
+                'valid' => 0,
+            ],
+            [
+                'question_id' => 4,
+                'name' => 'みよし',
+                'valid' => 1,
+            ],
         ];
 
 

@@ -8,7 +8,7 @@ class Question extends Model
 {
     public function choices()
     {
-        return $this->hasMany('App\Model\Choice');
+        return $this->hasMany('App\Choice');
     }
 
 }
