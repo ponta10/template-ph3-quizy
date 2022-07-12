@@ -13,7 +13,7 @@
     <div class="main">
         <h2>大問追加</h2>
         <form action="{{ route('big_add')}}" method="post" enctype="multipart/form-data">
-        @csrf
+            @csrf
             <input type="text" name="name">
             <input type="submit" value="追加">
         </form>
@@ -28,7 +28,10 @@
                     <a href="/admin/question/display/ {{$bigQuestion->id}}"><img src="\storage\iconmonstr-pencil-7-240.png" alt="">編集</a>
                 </div>
                 <div class="big_link_delete">
-                    <a href="#"><img src="\storage\iconmonstr-trash-can-9-240.png" alt="">削除</a>
+                    <form action="{{ route('big_delete', [ 'big_question_id' => $bigQuestion['id'] ]) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="image" src="/storage/iconmonstr-trash-can-9-240.png" class="trash_can">
+                    </form>
                 </div>
             </div>
         </div>

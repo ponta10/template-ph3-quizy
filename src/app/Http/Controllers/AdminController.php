@@ -9,8 +9,13 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index() {
-        $bigQuestions = BigQuestion::all();
+        $bigQuestions = BigQuestion::where( 'status' , 1 )->get();
         return view('admin.index', compact('bigQuestions'));
     }
     
@@ -18,6 +23,7 @@ class AdminController extends Controller
         $data = $request->all();
         $create_big_question = BigQuestion::insertGetId([
             'name' => $data['name'], 
+            'status' => 1,
         ]);
         return view('admin.question.display', ['id' => $create_big_question]);
     }
@@ -46,6 +52,15 @@ class AdminController extends Controller
         ]);
         endforeach;
         return redirect()->route('admin.question.display',['id' => $id]);
+    }
+
+    public function big_delete(Request $request,$big_question_id)
+    {
+        $inputs = $request->all();
+        // dd($inputs);
+        // 論理削除なので、status=2
+        BigQuestion::where('id', $big_question_id)->update([ 'status' => 2 ]);
+        return redirect('admin');
     }
 
     public function delete(Request $request,$question_id)

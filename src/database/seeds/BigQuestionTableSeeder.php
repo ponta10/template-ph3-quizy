@@ -15,9 +15,11 @@ class BigQuestionTableSeeder extends Seeder
         $params = [
             [
                 'name' => '東京の難読地名クイズ',
+                'status' => 1
             ],
             [
                 'name' => '広島の難読地名クイズ',
+                'status' => 1
             ],
         ];
 

@@ -179,4 +179,14 @@ a {
 .back {
   width: 30px;
   height: 30px;
+}
+
+header {
+  position: relative;
+}
+header a {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */
