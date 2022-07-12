@@ -189,4 +189,8 @@ header a {
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
+}
+
+.alert {
+  color: red;
 }/*# sourceMappingURL=style.css.map */

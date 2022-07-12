@@ -10,8 +10,8 @@
 </head>
 
 <body>
-@component('components.header')
-@endcomponent
+     @component('components.header')
+     @endcomponent
      <div class="home">
           <a href="../../"><img src="\storage\iconmonstr-home-thin-240.png" alt="" class="back">管理画面TOPに戻る</a>
           <form action="{{ route('store', ['id' =>  $id ]) }}" method="post" enctype="multipart/form-data">

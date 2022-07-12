@@ -39,4 +39,4 @@ Route::post('/store/{id}', 'AdminController@store')->name('store');
 Route::post('/delete/{question_id}', 'AdminController@delete')->name('delete');
 Route::post('/edit/{question_id}', 'AdminController@edit')->name('edit');
 Route::post('/big_add', 'AdminController@big_add')->name('big_add');
-Route::post('/big_delete', 'AdminController@big_delete')->name('big_delete');
+Route::post('/big_delete/{big_question_id}', 'AdminController@big_delete')->name('big_delete');
